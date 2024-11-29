@@ -133,7 +133,11 @@ for (let i = 50001; i <= 50100; i++) {
           startX = e.touches[0].clientX;
         }
       });
-
+     // 창 크기 조정 시 캔버스 크기 조정
+      window.addEventListener('resize', () => {
+        resizeCanvas();
+        drawImage(); // 크기 변경 시 이미지 다시 그리기
+      });
     });
   </script>
 </body>
